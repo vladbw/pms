@@ -1,11 +1,12 @@
 import "./AppointmentDetailsCard.css";
 import type { Appointment } from "../../types/Appointment";
+import { memo } from "react";
 
 interface AppointmentDetailsCardProps {
   appointment: Appointment;
 }
 
-const AppointmentDetailsCard = ({
+const AppointmentDetailsCard = memo(({
   appointment,
 }: AppointmentDetailsCardProps) => {
   const date = new Date(appointment.dateTime);
@@ -41,6 +42,6 @@ const AppointmentDetailsCard = ({
       </div>
     </div>
   );
-};
+});
 
 export default AppointmentDetailsCard;
