@@ -1,8 +1,8 @@
 //Prod
-const API_BASE = 'https://pms-production-8f21.up.railway.app/api';
+// const API_BASE = 'https://pms-production-8f21.up.railway.app/api';
 
 //Local
-// const API_BASE = 'http://localhost:5104/api';
+const API_BASE = 'http://localhost:5104/api';
 
 const patients = [
   { fullName: 'Jan van der Berg', address: 'Keizersgracht 123, 1015 CJ Amsterdam' },
