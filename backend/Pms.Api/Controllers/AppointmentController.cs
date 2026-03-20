@@ -43,7 +43,11 @@ namespace Pms.Api.Controllers
             try
             {
                 var appointment = await _appointmentService.CreateAppointmentAsync(dto);
-                return CreatedAtAction(nameof(GetByPatientId), new { patientId = appointment.Id }, appointment);
+                return CreatedAtAction(nameof(GetByPatientId), new { patientId = dto.PatientId }, appointment);
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(new { error = ex.Message }); // No matching patient
             }
             catch (InvalidOperationException e)
             {

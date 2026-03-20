@@ -42,7 +42,14 @@ public class AppointmentService : IAppointmentService
     }
 
     public async Task<AppointmentDto> CreateAppointmentAsync(CreateAppointmentDto dto)
-    {   
+    {
+        var patientExists = await _context.Patients.AnyAsync(p => p.Id == dto.PatientId);
+
+        if (!patientExists)
+        {
+            throw new KeyNotFoundException($"Patient with id {dto.PatientId} does not exist.");
+        }
+
         // TODO: In production, we must make sure the lock does not lock the wholw db
         using var transaction = await _context.Database.BeginTransactionAsync(
             System.Data.IsolationLevel.Serializable
