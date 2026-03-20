@@ -7,6 +7,11 @@ import type {
 
 export const getPatientById = async (id: number): Promise<Patient> => {
   const response = await fetch(`${API_BASE_URL}/patients/${id}`);
+
+  if (response.status === 404) {
+    throw new Error('Patient not found.');
+  }
+  
   if (!response.ok) {
     throw new Error("Error while fetching patient");
   }
