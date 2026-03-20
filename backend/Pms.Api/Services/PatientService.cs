@@ -16,7 +16,7 @@ public class PatientService : IPatientService
 
     public async Task<List<PatientOverviewDto>> GetAllPatientsAsync()
     {
-        //Here and also in the method fetching all appointments, a production grade system would probably require pagination (eg first load up first 100 results, then 100-200, etc.)
+        //TODO: Here and also in the method fetching all appointments, a production grade system would probably require pagination (eg first load up first 100 results, then 100-200, etc.)
         return await _context.Patients
             .Select(p => new PatientOverviewDto(
                 p.Id,
