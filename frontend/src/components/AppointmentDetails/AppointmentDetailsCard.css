@@ -1,0 +1,50 @@
+.appointment-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.appointment-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.appointment-treatment {
+  font-weight: 500;
+  color: #0f172a;
+}
+
+.appointment-dentist {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.appointment-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.appointment-datetime {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.appointment-duration-badge {
+  font-size: 12px;
+  font-weight: 500;
+  color: #2563eb;
+  background-color: #eff6ff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}

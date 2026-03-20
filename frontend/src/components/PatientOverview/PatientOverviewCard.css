@@ -1,0 +1,28 @@
+.patient-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.patient-card:hover {
+  background-color: #f8fafc;
+  border-color: #2563eb;
+}
+
+.patient-card-id {
+  font-size: 12px;
+  font-weight: 600;
+  color: #94a3b8;
+  min-width: 32px;
+}
+
+.patient-card-name {
+  font-weight: 500;
+  color: #0f172a;
+}

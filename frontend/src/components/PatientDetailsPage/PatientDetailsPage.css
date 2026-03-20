@@ -1,0 +1,77 @@
+.patient-detail-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.btn-back {
+  background: none;
+  border: none;
+  color: #2563eb;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 24px;
+}
+
+.btn-back:hover {
+  opacity: 0.7;
+}
+
+.patient-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 36px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+}
+
+.patient-photo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.patient-info h1 {
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+.patient-address {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.appointments-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.appointments-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.appointments-header h2 {
+  font-size: 18px;
+}
+
+.appointments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.empty-state {
+  text-align: center;
+  color: #94a3b8;
+  padding: 40px 0;
+  font-size: 14px;
+}
