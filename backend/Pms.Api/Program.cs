@@ -21,11 +21,13 @@ builder.Services.AddScoped<IAppointmentService, AppointmentService>();
 builder.Services.AddDbContext<PmsDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+var allowedOrigin = builder.Configuration["AllowedOrigin"] ?? "http://localhost:5173";
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>
     {
-        policy.WithOrigins("http://localhost:5173")
+        policy.WithOrigins(allowedOrigin)
               .AllowAnyHeader()
               .AllowAnyMethod();
     });

@@ -434,3 +434,5 @@ FodyWeavers.xsd
 
 # VS Code REST client
 *.http
+
+appsettings.Production.json
