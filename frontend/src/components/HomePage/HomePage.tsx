@@ -27,11 +27,12 @@ const HomePageComponent = () => {
 
   const handleCreatePatient = useCallback(
     async (dto: CreatePatientDto) => {
-      await createPatient(dto);
+      const createdPatient = await createPatient(dto);
       await fetchCallback();
       setIsModalOpen(false);
+      navigate(`/patients/${createdPatient.id}`);
     },
-    [fetchCallback],
+    [fetchCallback, navigate],
   );
 
   const handlePatientClick = useCallback(

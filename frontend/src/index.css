@@ -18,8 +18,8 @@ h1, h2, h3 {
 button {
   padding: 8px 16px;
   border-radius: 6px;
-  border: 1px solid #2563eb;
-  background-color: #2563eb;
+  border: 1px solid #f8fafc;
+  background-color: #120d31;
   color: white;
   font-size: 14px;
   font-weight: 500;
@@ -41,13 +41,13 @@ input, select {
   border: 1px solid #cbd5e1;
   border-radius: 6px;
   font-size: 14px;
-  color: #0f172a;
+  color: #120d31;
   background-color: white;
 }
 
 input:focus, select:focus {
   outline: none;
-  border-color: #2563eb;
+  border-color: #120d31;
 }
 
 label {

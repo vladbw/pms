@@ -17,6 +17,7 @@
 
 .search-input {
   margin-bottom: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.10);
 }
 
 .patient-list {
@@ -27,7 +28,7 @@
 
 .empty-state {
   text-align: center;
-  color: #94a3b8;
+  color: #120d31;
   padding: 40px 0;
   font-size: 14px;
 }
