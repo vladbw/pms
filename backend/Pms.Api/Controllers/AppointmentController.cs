@@ -28,6 +28,8 @@ namespace Pms.Api.Controllers
             if (dto.PatientId <= 0)
                 return BadRequest(new { error = "A valid patient id is required." });
 
+            // TODO: With this current setup, an Api call can technically add appointments for imaginary doctors, the fix would be to check here and if dentist is not found, return bad req
+            //TODO: Also, in a production app here we would want to specify the rules and matching error messages at a dto level, similar to the way I did it in the frontend
             if (string.IsNullOrWhiteSpace(dto.DentistName))
                 return BadRequest(new { error = "Dentist name is required." });
 

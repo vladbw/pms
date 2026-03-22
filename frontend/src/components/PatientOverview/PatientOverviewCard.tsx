@@ -9,7 +9,8 @@ interface PatientCardProps {
 }
 
 const PatientOverviewCard = memo(({ patient, onClick }: PatientCardProps) => {
-  //TODO: In a production app, we would implement pagination on the server so as not to fetch data that might not be seen at all.
+  //TODO: In a production app, if we had a real concern about the items that could be rendered, we would likely do implement some
+  // virtualization (react-window) to make sure that the components that are far from the viewport are not mounted at all until needed
   const { ref, isVisible } = useIntersectionObserver({ threshold: 0.05 });
   return (
     <div

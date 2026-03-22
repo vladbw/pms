@@ -1,5 +1,7 @@
 namespace Pms.Api.DTOs
 {
+    //TODO: In a real system, I would suggest storing the real images in a cloud service like S3, then we would only be
+    // storing the url of the uploaded file in the patient db.
     public record CreatePatientDto(
         string FullName,
         string Address,
